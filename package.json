@@ -1,24 +1,51 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "sage-hr",
-  "title": "Sage HR",
+  "title": "Search SageHR",
   "description": "Integration with Sage HR to get a searchable list on who is out today",
+  "keywords": [
+    "SageHR Integration",
+    "Employee Absence Tracker",
+    "Workforce Management",
+    "Leave Management",
+    "Employee Availability",
+    "HR Dashboard Raycast",
+    "Workplace Attendance"
+  ],
   "icon": "command-icon.png",
   "author": "cyxn",
+  "preferences": [
+    {
+      "name": "accessToken",
+      "type": "password",
+      "title": "Access Token",
+      "description": "SageHR API access token",
+      "required": true
+    },
+    {
+      "name": "subdomain",
+      "type": "textfield",
+      "title": "Subdomain",
+      "description": "SageHR Subdomain",
+      "required": true
+    }
+  ],
   "categories": [
-    "Communication"
+    "Productivity",
+    "Other"
   ],
   "license": "MIT",
   "commands": [
     {
       "name": "index",
-      "title": "List who is out today",
+      "title": "Get List of Absent Employees",
       "description": "Get a searchable list on who is out today",
       "mode": "view"
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.64.4"
+    "@raycast/api": "^1.64.4",
+    "@raycast/utils": "^1.10.1"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
